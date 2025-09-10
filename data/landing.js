@@ -41,11 +41,7 @@ export const featuresData = [
     description:
       "Extract data automatically from receipts using advanced AI technology",
   },
-  {
-    icon: <PieChart className="h-8 w-8 text-blue-600" />,
-    title: "Budget Planning",
-    description: "Create and manage budgets with intelligent recommendations",
-  },
+  
   {
     icon: <CreditCard className="h-8 w-8 text-blue-600" />,
     title: "Multi-Account Support",
@@ -88,24 +84,24 @@ export const howItWorksData = [
 // Testimonials Data
 export const testimonialsData = [
   {
-    name: "Sarah Johnson",
+    name: "Rhydam Khatri",
     role: "Small Business Owner",
     image: "https://randomuser.me/api/portraits/women/75.jpg",
     quote:
-      "Welth has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
+      "DhanRaksham has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
   },
   {
-    name: "Michael Chen",
+    name: "Ravi Sharma",
     role: "Freelancer",
     image: "https://randomuser.me/api/portraits/men/75.jpg",
     quote:
       "The receipt scanning feature saves me hours each month. Now I can focus on my work instead of manual data entry and expense tracking.",
   },
   {
-    name: "Emily Rodriguez",
+    name: "Kendall Jenner",
     role: "Financial Advisor",
     image: "https://randomuser.me/api/portraits/women/74.jpg",
     quote:
-      "I recommend Welth to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
+      "I recommend DhanRaksham to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
   },
 ];

@@ -8,6 +8,7 @@ import {
   statsData,
   testimonialsData,
 } from "@/data/landing";
+import { BarChart2, PieChart } from "lucide-react";
 import HeroSection from "@/components/hero";
 import Link from "next/link";
 
@@ -18,12 +19,12 @@ const LandingPage = () => {
       <HeroSection />
 
       {/* Stats Section */}
-      <section className="py-20 bg-blue-50">
+      <section className="mt-8 py-16 bg-blue-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {statsData.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">
+                <div className="text-4xl font-bold text-blue-800 mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
@@ -36,19 +37,42 @@ const LandingPage = () => {
       {/* Features Section */}
       <section id="features" className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Everything you need to manage your finances
-          </h2>
+          <div className="section-header">
+            <h2 className="section-title text-3xl font-bold text-center mb-4">
+              Services We Provide
+            </h2>
+            <p className="section-subtitle text-center mb-12">Comprehensive solutions for all your financial needs — from smart budgeting and stock predictions to multi-currency conversions. </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuresData.map((feature, index) => (
-              <Card className="p-6" key={index}>
+            <Link href="/dashboard">
+              <Card className="p-6" >
                 <CardContent className="space-y-4 pt-4">
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <PieChart className="h-8 w-8 text-blue-600" />
+                  <h3 className="text-xl font-semibold">Budget Planning</h3>
+                  <p className="text-gray-600">Create and manage budgets with automated insights and a smart AI receipt scanner to make smarter, data-driven financial decisions.</p>
+
                 </CardContent>
               </Card>
-            ))}
+            </Link>
+            <Link href="/stock">
+              <Card className="p-6" >
+                <CardContent className="space-y-4 pt-4">
+                  <BarChart2 className="h-8 w-8 text-blue-600" />
+                  <h3 className="text-xl font-semibold">Stock Market Prediction</h3>
+                  <p className="text-gray-600">Predict stock market trends with data-driven insights to make smarter and informed investment decisions.</p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/currency">
+              <Card className="p-6" >
+                <CardContent className="space-y-4 pt-4">
+                  <BarChart2 className="h-8 w-8 text-blue-600" />
+                  <h3 className="text-xl font-semibold">Multi-Currency Converter</h3>
+                  <p className="text-gray-600">Instantly convert currencies with accurate, real-time exchange rates for seamless international transactions.</p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
@@ -105,19 +129,19 @@ const LandingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-10 bg-blue-800">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Take Control of Your Finances?
           </h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
             Join thousands of users who are already managing their finances
-            smarter with Welth
+            smarter with DhanRaksham
           </p>
           <Link href="/dashboard">
             <Button
               size="lg"
-              className="bg-white text-blue-600 hover:bg-blue-50 animate-bounce"
+              className="bg-white text-blue-800 hover:bg-blue-50 animate-bounce"
             >
               Start Free Trial
             </Button>
